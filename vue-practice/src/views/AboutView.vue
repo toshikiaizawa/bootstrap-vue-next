@@ -16,6 +16,7 @@ const isOpen = ref(true)
   </div>
   <Modal v-model="modal"></Modal>
   <CustomModal v-model="isOpen">
+    <template #header> </template>
     <template #footer>
       <BButton @click="isOpen = !isOpen">キャンセル</BButton>
       <BButton>保存</BButton>

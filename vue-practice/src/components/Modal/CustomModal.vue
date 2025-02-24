@@ -1,5 +1,10 @@
 <template>
-  <BModal no-footer>
+  <BModal no-header no-footer>
+    <div class="modal-header">
+      <ModalHeader>
+        <slot name="header"></slot>
+      </ModalHeader>
+    </div>
     <div class="modal-footer">
       <ModalFooter>
         <slot name="footer"> </slot>
@@ -10,11 +15,15 @@
 
 <script setup lang="ts">
 import { BModal } from 'bootstrap-vue-next'
+import ModalHeader from './ModalHeader.vue'
 import ModalFooter from './ModalFooter.vue'
 </script>
 
 <style>
 .modal-footer {
+  padding: 0;
+}
+.modal-header {
   padding: 0;
 }
 </style>
