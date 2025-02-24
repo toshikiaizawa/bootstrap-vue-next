@@ -1,8 +1,14 @@
 <template>
-  <BButton>キャンセル</BButton>
-  <BButton>保存</BButton>
+  <div class="bl_modal_footer">
+    <slot></slot>
+  </div>
 </template>
 
-<script setup lang="ts">
-import { BButton } from 'bootstrap-vue-next'
-</script>
+<style scoped>
+.bl_modal_footer {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  width: 100%;
+}
+</style>

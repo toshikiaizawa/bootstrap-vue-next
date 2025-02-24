@@ -1,9 +1,9 @@
 <template>
   <BModal no-footer>
-    <div class="modal-footer d-flex justify-content-end">
-      <slot name="footer">
-        <ModalFooter></ModalFooter>
-      </slot>
+    <div class="modal-footer">
+      <ModalFooter>
+        <slot name="footer"> </slot>
+      </ModalFooter>
     </div>
   </BModal>
 </template>
@@ -12,3 +12,9 @@
 import { BModal } from 'bootstrap-vue-next'
 import ModalFooter from './ModalFooter.vue'
 </script>
+
+<style>
+.modal-footer {
+  padding: 0;
+}
+</style>

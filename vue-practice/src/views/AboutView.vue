@@ -2,6 +2,7 @@
 import { ref } from 'vue'
 import Modal from '@/components/Modal.vue'
 import CustomModal from '@/components/Modal/CustomModal.vue'
+import { BButton } from 'bootstrap-vue-next'
 
 const modal = ref(false)
 const isOpen = ref(true)
@@ -15,6 +16,9 @@ const isOpen = ref(true)
   </div>
   <Modal v-model="modal"></Modal>
   <CustomModal v-model="isOpen">
-    <template #footer></template>
+    <template #footer>
+      <BButton @click="isOpen = !isOpen">キャンセル</BButton>
+      <BButton>保存</BButton>
+    </template>
   </CustomModal>
 </template>
